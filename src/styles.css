@@ -28,13 +28,10 @@ body {
 }
 .information-section {
   border: 1px solid black;
-  align-content: center;
-  text-align: center;
   padding: 15px;
   margin: 20px 0 20px 0;
-  width: 420px;
-  flex-wrap: wrap;
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 .image-section {
