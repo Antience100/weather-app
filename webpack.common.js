@@ -1,5 +1,5 @@
-const path = require(path);
-const HtmlWebpackPlugin = require(html - webpack - plugin);
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -8,6 +8,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Production",
+      template: "./src/index.html",
+      filename: "index.html",
     }),
   ],
   devtool: "eval-source-map",
@@ -30,7 +32,7 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
     ],
