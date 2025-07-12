@@ -1,4 +1,5 @@
-import { getWeatherData } from "./weatherHandler";
+import { getWeatherData } from "./weatherHandler.js";
+import { displayWeather } from "./uiHandler.js";
 
 export function setupEventListeners() {
   const searchBtn = document.querySelector(".search-btn");
@@ -8,7 +9,8 @@ export function setupEventListeners() {
     const city = searchText.value;
     if (city) {
       const data = await getWeatherData(city);
-      console.log(data.days[0]);
+      displayWeather(data);
     }
   });
+
 }
